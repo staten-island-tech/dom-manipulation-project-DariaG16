@@ -1,0 +1,95 @@
+const button = document.getElementById("btn"); //these two do the same thing. this one gets it by id
+const text = document.querySelector("#text"); //use this when were getting it by class, in this example we get the id
+console.log(text);
+
+//INSERTING HTML (NOT ADJACENT)
+
+const DOMSelectors = {
+button: document.getElementById("btn"),
+text: document.querySelector("#text"),
+empty: document.querySelector(".nothing"), //this does nothing, you can do this in here
+box: document.querySelector("#big-black-box"),
+points: document.querySelectorAll(".point"), //when youre selecting something that isn't a class (list or smtg), you have to use queryselectorALL
+};
+//console.log(DOMSelectors);
+
+function backgroundAndText(background, text) {
+background.style.backgroundColor = "red";
+text.textContent = "this is now a big red box";
+text.style.fontSize = "40px";
+}
+//backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+
+DOMSelectors.button.addEventListener("click", function () {
+backgroundAndText(DOMSelectors.box, DOMSelectors.text);
+});
+//when using a nodelist, you can add a foreach
+
+function changeLi() {
+let pointIndex = 1;
+DOMSelectors.points.forEach((point) => {
+//console.log(point); instead of console logging, you can add an EVENT listener
+point.addEventListener("click", function () {
+point.textContent = `Hello I am point ${pointIndex}`; //first time you click this it will update the text
+pointIndex++; //second time you click this it will update the text in the order you click on it, adding one each time
+});
+});
+}
+changeLi(); //calling the function
+
+INDEX.HTML
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>cool a</title>
+  </head>
+  <body>
+    <div id="big-black-box">
+      <p id="text">this is a bunch of wordsjdslfjdsjghkfd</p>
+
+      <button type="button" id="btn">Click</button>
+
+      <ul>
+        <li class="point">1</li>
+        <li class="point">2</li>
+        <li class="point">3</li>
+      </ul>
+    </div>
+    <script src="index.js"></script>
+
+  </body>
+</html>
+
+
+STYLE.CSS
+#container-box {
+background-color: black;
+
+font-size: 2vh;
+color: cornsilk;
+text-align: center;
+}
+
+.cat-poster {
+width: 10rem;
+}
+
+INSERTING ADJACENT HTML
+const DOMSelectors = {
+  button: document.getElementById("btn"),
+  box: document.getElementById("container-box"),
+  input: document.querySelector(`#input`),
+};
+/* const cat = "meow";
+DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>We are an ${cat} </h1>`); //2 arguments: where were putting it and what were putting in it.
+ */
+DOMSelectors.button.addEventListener("click", function () {
+  let input = DOMSelectors.input.value; // we get the value of whatever the user typed in the text box named "input"
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
+  DOMSelectors.input.value = ""; //resetting the text box to clear every time you click the button
+});

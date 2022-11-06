@@ -4,17 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pick your artist!!!</title>
+    <title>Make your Cookie</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div id="container-box">
-      <p id="text">Please insert artist name, tool, and hat.</p>
-      <input type="text" id="input" />
-      <button type="button" id="btn">Click Me!</button>
+    <h1 id="heading">COOKIE MAKER!</h1>
+    <div class="info">
+      <div id="doughType">
+        <h2 id="text">Dough Type:</h2>
+        <p class="options">Options: Dark Chocolate, Vanilla,</p>
+        <input type="text" id="doughTypetxt" class="text" />
+      </div>
+      <div id="rarity">
+        <h2 id="text">Rarity:</h2>
+        <p class="options">Options: Common, Rare, Epic, Legendary, Ancient</p>
+        <input type="text" id="raritytxt" class="text" />
+      </div>
+      <div id="skill">
+        <h2 id="text">Skill Type:</h2>
+        <p class="options">
+          Options: Charge, Magic, Ranged, Bomber, Defense, Healer, Support,
+          Ambush,
+        </p>
+        <input type="text" id="skilltxt" class="text" />
+      </div>
+      <div id="clothes">
+        <h2 id="text">Clothes:</h2>
+        <p class="options">Options: Smiling, Frowning, Confused, Angry</p>
+        <input type="text" id="clothestxt" class="text" />
+      </div>
+      <div id="expression">
+        <h2 id="text">Facial Expression:</h2>
+        <p class="options">Options: Smiling, Frowning, Angry</p>
+        <input type="text" id="expressiontxt" class="text" />
+        <p>Click this to create your cookie below!</p>
+        <button type="button" id="btn">Click Me!</button>
+      </div>
     </div>
-
+    <div id="output"></div>
     <script src="index.js"></script>
   </body>
 </html>

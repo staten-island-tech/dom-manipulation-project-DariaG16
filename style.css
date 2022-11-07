@@ -38,8 +38,8 @@ body,
 #lineart {
   width: 100%;
 }
-#Choco {
-  position: absolute;
+/* #Choco {
+  position: fixed;
   width: 80px;
   bottom: 1px;
-}
+} */

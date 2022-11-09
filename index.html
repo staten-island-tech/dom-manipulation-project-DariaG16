@@ -40,14 +40,78 @@
         <p class="options">Options: Smiling, Frowning, Angry</p>
         <input type="text" id="expressiontxt" class="text" />
         <p>Click this to create your cookie below!</p>
-        <button type="button" onclick="show()" id="btn">Click Me!</button>
+        <button type="button" href="javascript:showImage()" id="btn">
+          Create character!
+        </button>
       </div>
     </div>
     <div id="output">
       <h2>Cookie:</h2>
-      <img id="lineart" src="Images/Lineart.png" alt="Base lineart" />
-      <div class="Features">
-        <img id="Choco" src="" alt="Chocolate Dough" />
+      <img
+        id="lineart"
+        class="images"
+        src="Images/Lineart.png"
+        alt="Base lineart"
+      />
+      <div class="dough">
+        <img
+          id="choco"
+          class="images"
+          src="Images/ChocoDough.png"
+          alt="Chocolate Dough"
+        />
+        <img
+          id="ginger"
+          class="images"
+          src="Images/GingerbreadDough.png"
+          alt="Gingerbread Dough"
+        />
+        <img
+          id="vanilla"
+          class="images"
+          src="Images/VanillaDough.png"
+          alt="Vanilla Dough"
+        />
+      </div>
+      <div class="clothes">
+        <img
+          id="dress"
+          class="images"
+          src="Images/DressClothes.png"
+          alt="A red dress"
+        />
+        <img
+          id="cape"
+          class="images"
+          src="Images/CapeClothes.png"
+          alt="A vanilla cape"
+        />
+        <img
+          id="suit"
+          class="images"
+          src="Images/SuitClothes.png"
+          alt="A black suit"
+        />
+      </div>
+      <div class="expression">
+        <img
+          id="smiling"
+          class="images"
+          src="Images/SmilingExpression.png"
+          alt="Smiling Expression"
+        />
+        <img
+          id="angry"
+          class="images"
+          src="Images/AngryExpression.png"
+          alt="Angry Expression"
+        />
+        <img
+          id="frown"
+          class="images"
+          src="Images/FrownExpression.png"
+          alt="Frowning Expression"
+        />
       </div>
     </div>
     <script src="index.js"></script>

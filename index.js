@@ -24,11 +24,11 @@ DOMSelectors.button.addEventListener("click", function () {
     `beforeend`,
     `<p>${doughType}</p> <p>${rarity}</p>  <p>${skill}</p>  <p>${clothes}</p>  <p>${expression}</p>`
   ); //whatever is put in the doughtype box comes out under it
-  /*   DOMSelectors.doughTypetxt.value = "";
+  DOMSelectors.doughTypetxt.value = "";
   DOMSelectors.raritytxt.value = "";
-  DOMSelectors.skill.value = "";
-  DOMSelectors.clothes.value = "";
-  DOMSelectors.expression.value = ""; */
+  DOMSelectors.skilltxt.value = "";
+  DOMSelectors.clothestxt.value = "";
+  DOMSelectors.expressiontxt.value = "";
   //resetting the text box to clear every time you click the button
 });
 

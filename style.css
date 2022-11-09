@@ -12,7 +12,7 @@ body,
   text-align: center;
   font-size: 10vh;
   color: cornsilk;
-  border-radius: 15%;
+  border-radius: 30px;
 }
 .info {
   background-color: rgb(161, 98, 72);
@@ -20,7 +20,7 @@ body,
   color: cornsilk;
   text-align: center;
   margin: 5%;
-  border-radius: 15%;
+  border-radius: 30px;
   padding: 5px;
 }
 #output {
@@ -30,16 +30,14 @@ body,
   text-align: center;
   margin: auto;
   margin-bottom: 5%;
-  border-radius: 15%;
+  border-radius: 30px;
   padding: 5px;
   width: 50%;
   text-align: center;
 }
-#lineart {
-  width: 100%;
+.images {
+  position: absolute;
+  width: 30%;
+  left: 36vw;
+  visibility: hidden;
 }
-/* #Choco {
-  position: fixed;
-  width: 80px;
-  bottom: 1px;
-} */

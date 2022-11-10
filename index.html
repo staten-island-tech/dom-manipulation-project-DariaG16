@@ -10,11 +10,6 @@
   <body>
     <h1 id="heading">COOKIE MAKER!</h1>
     <div class="info">
-      <div id="doughType">
-        <h2 id="text">Dough Type:</h2>
-        <p class="options">Options: Dark Chocolate, Vanilla, Gingerbread</p>
-        <input type="text" id="doughTypetxt" class="text" />
-      </div>
       <div id="rarity">
         <h2 id="text">Rarity:</h2>
         <p class="options">Options: Common, Rare, Epic, Legendary, Ancient</p>
@@ -28,19 +23,26 @@
         </p>
         <input type="text" id="skilltxt" class="text" />
       </div>
+      <div id="doughType">
+        <h2 id="text">Dough Type:</h2>
+        <button class="options" type="button" id="Dark">Dark Chocolate</button>
+        <button class="options" type="button" id="Vanilla">Vanilla</button>
+        <button class="options" type="button" id="Ginger">Gingerbread</button>
+      </div>
       <div id="clothes">
         <h2 id="text">Clothes:</h2>
-        <p class="options">
-          Options: Black Suit, Hollyberry Dress, Vanilla Cape
-        </p>
-        <input type="text" id="clothestxt" class="text" />
+        <button class="options" type="button" id="Suit">Black Suit</button>
+        <button class="options" type="button" id="Dress">
+          Hollyberry Dress
+        </button>
+        <button class="options" type="button" id="Cape">Vanilla Cape</button>
       </div>
       <div id="expression">
         <h2 id="text">Facial Expression:</h2>
 
-        <button class="options" type="button" id="btn">Smiling</button>
-        <button class="options" type="button" id="btn">Frowning</button>
-        <button class="options" type="button" id="btn">Angry</button>
+        <button class="options" type="button" id="Smiling">Smiling</button>
+        <button class="options" type="button" id="Frowning">Frowning</button>
+        <button class="options" type="button" id="Angry">Angry</button>
         <p>Click this to create your cookie below!</p>
         <button type="button" id="btn">Create character!</button>
       </div>

@@ -41,3 +41,10 @@ body,
   left: 36vw;
   visibility: hidden;
 }
+
+#btn {
+  width: 200px;
+  font-weight: 700;
+  background-color: rgb(105, 50, 36);
+  color: antiquewhite;
+}

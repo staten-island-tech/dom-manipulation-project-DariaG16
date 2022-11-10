@@ -47,7 +47,9 @@ DOMSelectors.button.addEventListener("click", function () {
   //resetting the text box to clear every time you click the button
 });
 
-DOMSelectors.darkBtn.addEventListener("click", function () {});
+DOMSelectors.darkBtn.addEventListener("click", function () {
+  let choco = DOMSelectors.choco.value;
+});
 /* function showImage(images) {
   images.style.visibility = "visible";
 }

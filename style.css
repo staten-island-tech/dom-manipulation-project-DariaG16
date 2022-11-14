@@ -48,3 +48,11 @@ body,
   background-color: rgb(105, 50, 36);
   color: antiquewhite;
 }
+
+#angry {
+  z-index: 5;
+}
+
+#delete {
+  background-color: red;
+}

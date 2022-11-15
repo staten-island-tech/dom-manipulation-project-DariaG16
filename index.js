@@ -1,5 +1,6 @@
 const DOMSelectors = {
   info: document.querySelector(`info`),
+  output: document.querySelector(`#output`),
   doughType: document.querySelector(`#doughType`),
   input: document.querySelector(`#input`),
   button: document.querySelector(`#btn`),
@@ -30,24 +31,27 @@ const DOMSelectors = {
   frowningBtn: document.querySelector(`#Frowningbtn`),
   angryBtn: document.querySelector(`#Angrybtn`),
 };
-
 DOMSelectors.button.addEventListener("click", function () {
   //when the button clicks, do this function:
   let rarity = DOMSelectors.raritytxt.value;
   let skill = DOMSelectors.skilltxt.value;
   // we get the value of whatever the user typed in the text box named "expression"
 
-  DOMSelectors.insertAdjacentHtml(
+  DOMSelectors.output.insertAdjacentHTML(
+    `beforeend`,
     `
     <h2>Cookie:</h2>
-    <p>Rarity: ${rarity}</p>  <p>Skill Type: ${skill}</p> <button id="delete"> Delete Cookie</button>
-    
-    `
+    <p>Rarity: ${rarity}</p>  <p>Skill Type: ${skill}</p>`
   ); //whatever is put in the doughtype box comes out under it
   DOMSelectors.raritytxt.value = "";
   DOMSelectors.skilltxt.value = "";
   //resetting the text box to clear every time you click the button
+  DOMSelectors.output.insertAdjacentHTML(
+    `afterend`,
+    `<button id="delete" >REMOVE COOKIE</button>`
+  ); //whatever is put in the doughtype box comes out under it
 });
+
 //buttons
 DOMSelectors.darkBtn.addEventListener("click", function () {
   let choco = DOMSelectors.choco;
@@ -91,6 +95,12 @@ DOMSelectors.angryBtn.addEventListener("click", function () {
 DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>We are an ${cat} </h1>`); //2 arguments: where were putting it and what were putting in it. */
 
 //REMOVING THE COOKIE
+
+/* var deleteBtn = document.getElementById("delete");
+deleteBtn.onclick = function () {
+  DOMSelectors.output.remove();
+  deleteBtn.remove();
+}; */
 
 /* function makeCookie() {
   //make the card

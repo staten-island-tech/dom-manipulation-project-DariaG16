@@ -19,17 +19,17 @@ body,
   font-size: 7vh;
   color: cornsilk;
   text-align: center;
-  margin: 5%;
+  margin: 3%;
   border-radius: 30px;
   padding: 5px;
 }
-#output {
+.output {
   background-color: rgb(161, 98, 72);
   font-size: 7vh;
   color: cornsilk;
   text-align: center;
   margin: auto;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
   border-radius: 30px;
   padding: 5px;
   width: 50%;
@@ -54,9 +54,9 @@ body,
 }
 
 #delete {
-  background-color: red;
+  background-color: rgb(129, 35, 11);
   font-size: 40px;
-  position: relative;
-  text-align: center;
-  margin: auto;
+  border-radius: 15px;
+  color: antiquewhite;
+  padding: 10px;
 }

@@ -1,6 +1,6 @@
 const DOMSelectors = {
   info: document.querySelector(`info`),
-  output: document.querySelector(`#output`),
+  finishedcookie: document.querySelector(`#finishedcookie`),
   doughType: document.querySelector(`#doughType`),
   input: document.querySelector(`#input`),
   button: document.querySelector(`#btn`),
@@ -10,6 +10,7 @@ const DOMSelectors = {
   clothestxt: document.querySelector(`#clothestxt`),
   expressiontxt: document.querySelector(`#expressiontxt`),
   images: document.querySelector(`images`),
+  delete: document.querySelector(`#delete`),
 
   choco: document.querySelector(`#choco`),
   vanilla: document.querySelector(`#vanilla`),
@@ -37,19 +38,21 @@ DOMSelectors.button.addEventListener("click", function () {
   let skill = DOMSelectors.skilltxt.value;
   // we get the value of whatever the user typed in the text box named "expression"
 
-  DOMSelectors.output.insertAdjacentHTML(
+  DOMSelectors.finishedcookie.insertAdjacentHTML(
     `beforeend`,
     `
-    <h2>Cookie:</h2>
-    <p>Rarity: ${rarity}</p>  <p>Skill Type: ${skill}</p>`
+    <h2 class="output" >Cookie:</h2>
+    <p class="output">Rarity: ${rarity}</p>  <p class="output">Skill Type: ${skill}</p> <button id="delete" >REMOVE COOKIE</button>`
   ); //whatever is put in the doughtype box comes out under it
   DOMSelectors.raritytxt.value = "";
   DOMSelectors.skilltxt.value = "";
   //resetting the text box to clear every time you click the button
-  DOMSelectors.output.insertAdjacentHTML(
-    `afterend`,
-    `<button id="delete" >REMOVE COOKIE</button>`
-  ); //whatever is put in the doughtype box comes out under it
+  var deleteBtn = document.getElementById("delete");
+  var output = document.querySelector("output");
+  deleteBtn.onclick = function () {
+    output.remove();
+    deleteBtn.remove();
+  }; //remove button
 });
 
 //buttons

@@ -53,7 +53,7 @@ body,
   z-index: 5;
 }
 
-#delete {
+#remove {
   background-color: rgb(129, 35, 11);
   font-size: 40px;
   border-radius: 15px;

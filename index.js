@@ -41,18 +41,22 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.finishedcookie.insertAdjacentHTML(
     `beforeend`,
     `
-    <h2 class="output" >Cookie:</h2>
-    <p class="output">Rarity: ${rarity}</p>  <p class="output">Skill Type: ${skill}</p> <button id="delete" >REMOVE COOKIE</button>`
+    <h2 id="cookieNam" class="output" >Cookie:</h2>
+    <p id="rarityOut" class="output">Rarity: ${rarity}</p> <p id="skillTypeOut" class="output">Skill Type: ${skill}</p> <button id="remove">REMOVE COOKIE</button>`
   ); //whatever is put in the doughtype box comes out under it
   DOMSelectors.raritytxt.value = "";
   DOMSelectors.skilltxt.value = "";
   //resetting the text box to clear every time you click the button
-  var deleteBtn = document.getElementById("delete");
-  var output = document.querySelector("output");
-  deleteBtn.onclick = function () {
-    output.remove();
-    deleteBtn.remove();
-  }; //remove button
+  var cookieNam = document.querySelector("#cookieNam");
+  var rarityOut = document.querySelector("#rarityOut");
+  var skillOut = document.querySelector("#skillTypeOut");
+  var remove = document.querySelector("#remove");
+  remove.addEventListener("click", function () {
+    cookieNam.remove();
+    remove.remove();
+    rarityOut.remove();
+    skillOut.remove();
+  }); //remove button
 });
 
 //buttons

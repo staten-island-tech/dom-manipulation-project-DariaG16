@@ -41,8 +41,11 @@ DOMSelectors.button.addEventListener("click", function () {
   DOMSelectors.finishedcookie.insertAdjacentHTML(
     `beforeend`,
     `
+    <div class="output1">
     <h2 id="cookieNam" class="output" >Cookie:</h2>
-    <p id="rarityOut" class="output">Rarity: ${rarity}</p> <p id="skillTypeOut" class="output">Skill Type: ${skill}</p> <button id="remove">REMOVE COOKIE</button>`
+    <p id="rarityOut" class="output">Rarity: ${rarity}</p> 
+    <p id="skillTypeOut" class="output">Skill Type: ${skill}</p> 
+    <button id="remove">REMOVE COOKIE</button></div>`
   ); //whatever is put in the doughtype box comes out under it
   DOMSelectors.raritytxt.value = "";
   DOMSelectors.skilltxt.value = "";

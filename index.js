@@ -34,8 +34,11 @@ const DOMSelectors = {
 };
 DOMSelectors.button.addEventListener("click", function () {
   //when the button clicks, do this function:
-  let rarity = DOMSelectors.raritytxt.value;
-  let skill = DOMSelectors.skilltxt.value;
+  const help = {
+    rarity: DOMSelectors.raritytxt.value,
+    skill: DOMSelectors.skilltxt.value,
+  };
+
   // we get the value of whatever the user typed in the text box named "expression"
 
   DOMSelectors.finishedcookie.insertAdjacentHTML(
@@ -43,8 +46,8 @@ DOMSelectors.button.addEventListener("click", function () {
     `
     <div class="output1">
     <h2 id="cookieNam" class="output" >Cookie:</h2>
-    <p id="rarityOut" class="output">Rarity: ${rarity}</p> 
-    <p id="skillTypeOut" class="output">Skill Type: ${skill}</p> 
+    <p id="rarityOut" class="output">Rarity: ${help.rarity}</p> 
+    <p id="skillTypeOut" class="output">Skill Type: ${help.skill}</p> 
     <button id="remove">REMOVE COOKIE</button></div>`
   ); //whatever is put in the doughtype box comes out under it
   DOMSelectors.raritytxt.value = "";

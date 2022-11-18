@@ -59,6 +59,15 @@ DOMSelectors.button.addEventListener("click", function () {
     remove.remove();
     rarityOut.remove();
     skillOut.remove();
+    choco.style.visibility = "hidden";
+    vanilla.style.visibility = "hidden";
+    ginger.style.visibility = "hidden";
+    suit.style.visibility = "hidden";
+    dress.style.visibility = "hidden";
+    cape.style.visibility = "hidden";
+    smiling.style.visibility = "hidden";
+    frowning.style.visibility = "hidden";
+    angry.style.visibility = "hidden";
   }); //remove button
 });
 
@@ -70,7 +79,6 @@ DOMSelectors.darkBtn.addEventListener("click", function () {
 DOMSelectors.vanillaBtn.addEventListener("click", function () {
   let vanilla = DOMSelectors.vanilla;
   vanilla.style.visibility = "visible";
-  vanilla.style.backgroundcolor = "red";
 });
 DOMSelectors.gingerBtn.addEventListener("click", function () {
   let ginger = DOMSelectors.ginger;

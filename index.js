@@ -75,37 +75,55 @@ DOMSelectors.button.addEventListener("click", function () {
 DOMSelectors.darkBtn.addEventListener("click", function () {
   let choco = DOMSelectors.choco;
   choco.style.visibility = "visible";
+  ginger.style.visibility = "hidden";
+  vanilla.style.visibility = "hidden";
 });
 DOMSelectors.vanillaBtn.addEventListener("click", function () {
   let vanilla = DOMSelectors.vanilla;
   vanilla.style.visibility = "visible";
+  ginger.style.visibility = "hidden";
+  choco.style.visibility = "hidden";
 });
 DOMSelectors.gingerBtn.addEventListener("click", function () {
   let ginger = DOMSelectors.ginger;
   ginger.style.visibility = "visible";
+  vanilla.style.visibility = "hidden";
+  choco.style.visibility = "hidden";
 });
 DOMSelectors.suitBtn.addEventListener("click", function () {
   let suit = DOMSelectors.suit;
   suit.style.visibility = "visible";
+  dress.style.visibility = "hidden";
+  cape.style.visibility = "hidden";
 });
 DOMSelectors.dressBtn.addEventListener("click", function () {
   let dress = DOMSelectors.dress;
   dress.style.visibility = "visible";
+  cape.style.visibility = "hidden";
+  suit.style.visibility = "hidden";
 });
 DOMSelectors.capeBtn.addEventListener("click", function () {
   let cape = DOMSelectors.cape;
   cape.style.visibility = "visible";
+  suit.style.visibility = "hidden";
+  dress.style.visibility = "hidden";
 });
 DOMSelectors.smilingBtn.addEventListener("click", function () {
   let smiling = DOMSelectors.smiling;
   smiling.style.visibility = "visible";
+  frowning.style.visibility = "hidden";
+  angry.style.visibility = "hidden";
 });
 DOMSelectors.frowningBtn.addEventListener("click", function () {
   let frowning = DOMSelectors.frowning;
   frowning.style.visibility = "visible";
+  smiling.style.visibility = "hidden";
+  angry.style.visibility = "hidden";
 });
 DOMSelectors.angryBtn.addEventListener("click", function () {
   let angry = DOMSelectors.angry;
+  smiling.style.visibility = "hidden";
+  frowning.style.visibility = "hidden";
   angry.style.visibility = "visible";
 });
 

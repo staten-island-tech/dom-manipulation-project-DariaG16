@@ -25,8 +25,8 @@ backgroundAndText(DOMSelectors.box, DOMSelectors.text);
 });
 //when using a nodelist, you can add a foreach
 
-function changeLi() {
-let pointIndex = 1;
+
+let pointIndex = 1;function changeLi() {
 DOMSelectors.points.forEach((point) => {
 //console.log(point); instead of console logging, you can add an EVENT listener
 point.addEventListener("click", function () {
